@@ -27,7 +27,7 @@ $conn = new MySqlConnection($dsn, 'root', 123123);
 
 ```
 $dsn = sprintf('pgsql:host=%s;port=%s;dbname=%s', '127.0.0.1', 3306, 'es_demo');
-$conn = new MySqlConnection($dsn, 'root', 123123);
+$conn = new PostgresConnection($dsn, 'root', 123123);
 ```
 
 ### insert and get insert id
