@@ -16,8 +16,17 @@ composer require jetea/database=~2.0 -vvv
 
 ### getting a connection
 
+* MySql
+
 ```
-$dsn = sprintf('mysql:host=%s;port=%s;dbname=%s;charset=%s', 'mysql', 3306, 'es_demo', 'utf8mb4');
+$dsn = sprintf('mysql:host=%s;port=%s;dbname=%s;charset=%s', '127.0.0.1', 3306, 'es_demo', 'utf8mb4');
+$conn = new MySqlConnection($dsn, 'root', 123123);
+```
+
+* Postgres
+
+```
+$dsn = sprintf('pgsql:host=%s;port=%s;dbname=%s', '127.0.0.1', 3306, 'es_demo');
 $conn = new MySqlConnection($dsn, 'root', 123123);
 ```
 
