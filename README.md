@@ -25,12 +25,12 @@ $conn = new MySqlConnection($dsn, 'root', 123123);
 
 ```
 $insertId = $conn->table('profile')->insertGetId([
-    'name'      => '张三',
+    'name'      => 'test-name',
     'gender'    => 1,
     'birthday'  => '1988-12-01 01:00:01',
-    'memo'      => '一段简单的信息' . rand(1, 10),
-    'lat'       => '30.54916000',
-    'lng'       => '104.06761000'
+    'memo'      => 'this is a test memo',
+    'lat'       => '30.54916000', //DECIMAL(10,8)
+    'lng'       => '104.06761000' //DECIMAL(11,8)
 ]);
 ```
 
@@ -39,18 +39,18 @@ $insertId = $conn->table('profile')->insertGetId([
 ```
 $affectNum = $conn->table('profile')->insert([
     [
-        'name'      => '张三',
+        'name'      => 'test-name',
         'gender'    => 1,
         'birthday'  => '1988-12-01 01:00:01',
-        'memo'      => '一段简单的信息' . rand(1, 10),
+        'memo'      => 'this is a test memo',
         'lat'       => '30.54916000',
         'lng'       => '104.06761000'
     ],
     [
-        'name'      => '李四',
+        'name'      => 'test-name-1',
         'gender'    => 1,
         'birthday'  => '2010-12-01 01:00:01',
-        'memo'      => '一段简单的信息 ' . rand(1, 10),
+        'memo'      => 'this is another test memo',
         'lat'       => '30.54916000',
         'lng'       => '104.06761000'
     ],
@@ -61,8 +61,8 @@ $affectNum = $conn->table('profile')->insert([
 
 ```
 affectNum = $conn->update('update profile set name = :name, memo = :memo where id = :id', [
-    ':name'     => '王五',
-    ':memo'     => '修改后的独白',
+    ':name'     => 'test-name',
+    ':memo'     => 'this is another memo',
     ':id'       => $id,
 ]);
 ```
