@@ -1,0 +1,21 @@
+{
+    "name": "jetea/database",
+    "description": "The Jetea Database component.",
+    "type": "library",
+    "keywords": ["database", "jetea"],
+    "license": "MIT",
+
+    "require": {
+        "php": ">=7.1.3"
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^5.4"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Jetea\\Database\\": "src/"
+        }
+    }
+}
