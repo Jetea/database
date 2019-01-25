@@ -19,6 +19,7 @@ The following database vendors are currently supported:
   * [transaction](#transaction)
   * [get query logs](#get-query-logs)
   * [execute the given callback in "dry run"(空转) mode](#execute-the-given-callback-in-dry-run空转-mode)
+* [License](#license)
 
 ## Installation
 
@@ -126,4 +127,8 @@ $conn->pretend(function ($conn) {
     //do something...
 });
 ```
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
 
