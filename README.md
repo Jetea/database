@@ -6,6 +6,20 @@ The following database vendors are currently supported:
 - MySQL
 - PostgreSQL
 
+## Overview
+
+* [Installation](#installation)
+* [Usage](#usage)
+  * [get connection](#get-connection)
+  * [insert and get insert id](#insert-and-get-insert-id)
+  * [insert and get the number of rows affected](#insert-and-get-the-number-of-rows-affected)
+  * [update and get the number of rows affected](#update-and-get-the-number-of-rows-affected)
+  * [select](#select)
+  * [delete and get the number of rows affected](#delete-and-get-the-number-of-rows-affected)
+  * [transaction](#transaction)
+  * [get query logs](#get-query-logs)
+  * [execute the given callback in "dry run"(空转) mode](#execute-the-given-callback-in-dry-run空转-mode)
+
 ## Installation
 
 ```
@@ -105,7 +119,7 @@ $conn->transaction(function ($conn) {
 $queryLogs = $conn->getQueryLog();
 ```
 
-### execute the given callback in "dry run"(空转) mode.
+### execute the given callback in "dry run"(空转) mode
 
 ```
 $conn->pretend(function ($conn) {
