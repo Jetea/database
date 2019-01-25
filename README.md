@@ -14,7 +14,7 @@ composer require jetea/database=~2.0 -vvv
 
 ## Usage
 
-### getting a connection
+### get connection
 
 * MySql
 
